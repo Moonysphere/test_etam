@@ -276,6 +276,9 @@ cursor: pointer;
 .box2{
     padding: 48px;
 }
+.conatiner{
+    display: none;
+}
 .box2 h2{
     font-size: 36px;
     text-transform: uppercase;

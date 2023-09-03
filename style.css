@@ -1,0 +1,597 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* nav burger */
+
+/* partie visible de la nav burger  */
+.nav-visibiliter{
+    display: flex;
+    z-index: 5;
+ height: auto;
+    background-color: #ffffff;
+    visibility: hidden;
+}
+/* premiere partie nav burger  */
+.fist-part-burger{
+    padding: 16px;
+    display: flex;
+    gap:12px;
+    align-items: center;
+    text-align: center;
+    
+}
+.nav-livraison-burger{
+   background-color: #000000;
+   color: #f1f1f1;
+   font-size: 14px;
+   text-align: center;
+   padding: 9px 96px;
+   visibility: hidden;
+   z-index: 5;
+}
+/* deuxieme partie nav burger  */
+.second-part-burger{
+    padding: 20px 16px;
+  
+}
+.second-part-burger img{
+    width: 34px;
+}
+/* liste icon burger  */
+.liste-icon-burger{
+    list-style: none;
+    gap: 12px;
+    display: flex;
+    
+}
+.liste-categorie-burger{
+    visibility: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-burger{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+}
+.navtoggler{
+    z-index: 10;
+    top: 3px;
+    left: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+border: none;
+outline: none;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+background: transparent;
+}
+/* button nav burger  */
+.line{
+    visibility: hidden;
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 3px;
+    background:#000000;
+    transition: transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.l1{
+    transform: translateY(-10px);
+}
+.l3{
+    transform: translateY(10px);
+}
+
+.navtoggler.active .l1{
+    transform : translateY(5px) rotate(135deg);
+    
+}
+.navtoggler.active .l2{
+   opacity: 0;
+}
+.navtoggler.active .l3{
+    transform : translateY(0px) rotate(-135deg);
+
+}
+
+.burger{
+    
+    position: fixed;
+    z-index: 10;
+    width: 50vw;
+    left: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border-left: 1px solid #cfcfcf;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.73,0.11,0.67,0.84);
+
+}
+
+.burger.active {
+    transform : translate(0);
+}
+.burger a{
+    
+    color: #000000;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+
+/* nav */
+/* nav info  */
+.nav-livraison{
+    padding: 9px 96px;
+        position: fixed;
+        align-items: center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    z-index: 9;
+    transition: 0.9s ease-out;
+}
+.nav-livraison a{
+    color: white;
+}
+.nav-livraison ul{
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+/*J'ai réalisé la barre de navigation même si vous aviez stipulé de ne pas le faire. 
+Je lui ai incorporé une position fixe et une animation en JavaScript pour qu'elle soit interactive.*/
+nav{
+    top:0px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    z-index: 5;
+    transition: 0.8s ease-out;
+}
+/* box-left */
+.first-part-nav{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+width: 1248px;
+padding: 0px 16px;
+}
+
+
+.liste-categorie{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+font-style: normal;
+font-weight: 500;
+gap: 24px;
+}
+
+/* box-right */
+.second-part-nav{
+    padding: 20px 24px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.liste-icon{
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    cursor: pointer;
+}
+/* main */
+
+main{
+    margin-top: 64px;
+}
+
+/* box1 */
+.box1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-info{
+    width: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.box-text-1{
+    padding: 0rem 10rem;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 32px;
+
+}
+.box-text-1 h2{
+    position: relative;
+    font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+z-index: 0;
+}
+.box-text-1 p{
+    padding: 0rem 2rem;
+    font-size: 16px;
+font-weight: 450;
+line-height: 18px;
+}
+
+.box-text-1 input{
+    padding: 12px 32px;
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+border: none;
+cursor: pointer;
+}
+
+.input-fleche{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+position: absolute;
+right: 335px;
+bottom: 80px;
+cursor: pointer;
+
+}
+
+/* box2 */
+.box2{
+    padding: 48px;
+}
+.box2 h2{
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+/* card */
+
+.list-card{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.card{
+    width: 450px;
+    padding: 38px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* card color  */
+.card1{
+    background-color: #FFEC85;
+}
+.card2{
+    background-color: #FFAEA3;
+}
+.card3{
+    background-color: #FAD7E5;
+}
+
+/* top-card  */
+.text-top-card{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.top-card{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+}
+
+.top-card p {
+    text-transform: uppercase;
+font-size: 10px;
+}
+.top-card h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* mid-card  */
+.mid-card {
+    font-size: 16px;
+    font-style: normal;
+font-weight: 450;
+line-height: normal;
+padding: 20px 0px;
+}
+
+/*button card*/
+.bottom-card input{
+    font-size: 12px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 4px 24px;
+    cursor: pointer;
+
+}
+
+/* box3 */
+.box3{
+    display: flex;
+}
+
+.box-text-3{
+    background-color: #FAD7E5;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.box-text-3 h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+.box-text-3 p{
+    font-size: 54px;
+    margin-right: 20px;
+    font-weight: 700;
+}
+.box-text-3 ul{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+.box-text-3 li {
+    align-items: center;
+    text-align: left;
+display: flex;
+font-size: 16px;
+}
+
+/* box 4 */
+.box4{
+    padding: 60px;
+    display:flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.box4 h2{
+    font-size: 36PX;
+    text-transform: uppercase;
+}
+.box4 img{
+ transform: rotate(180deg);
+    cursor: pointer;
+}
+/* gestion du Q&A  */
+.question-img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.question-title {
+    font-size: 24px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #ffffff;
+  
+}
+
+.answer.active {
+    display: block;
+  
+}
+.line-question{
+    display: flex;
+    justify-content: space-between;
+}
+.question-img.rotate {
+    transform: rotate(0deg);
+}
+/* onglet  */
+.list-onglet-question{
+    display: flex;
+    flex-direction: column;
+    gap: 16px ;
+}
+/* ligne question  */
+.onglet-question{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+/* ligne reponse  */
+.onglet-reponse {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width:500px) {
+    
+    /* nav resp */
+    .line{
+        visibility: visible;
+
+    }
+    .nav-livraison-burger{
+        visibility: visible;
+        
+    }
+    .nav-visibiliter{
+        visibility: visible;
+      
+    }
+    nav{
+        visibility: hidden;
+    }
+    .nav-livraison{
+        visibility: hidden;
+    }
+.liste-categorie-burger{
+    visibility: visible;
+}
+/* main resp  */
+main{
+   margin-top: 180px;
+   width: 100%;
+   overflow: hidden;
+}
+
+
+/* box1 resp  */
+
+
+
+
+    .box1{
+        flex-direction: column;
+        
+    }
+    .input-fleche{
+        position:initial;
+        margin-top: 2rem;
+    }
+    .box-text-1{
+        padding: 10px 32px;
+    gap: 36px;
+    
+    }
+    .box-text-1 br{
+        display: none;
+    }
+    .box-text-1 h2{
+        display: inline;
+        padding: 0;
+        font-size: 24px;
+        margin-top: 135px;
+        top: 0;
+        z-index: 0;
+      position: absolute;
+    
+    }
+.paronamique1{
+    width: 100%;
+}
+
+/* box2 resp  */
+
+.box2 h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+    text-align: left;
+}
+.list-card{
+    display: none;
+}
+
+
+
+
+.conatiner{
+    
+    width: 800px;
+    margin: 0 auto;
+    padding: 0px;
+   
+}
+.slider{
+
+    gap: 15px;
+}
+.slider .card-slide{
+    display: none;
+ 
+}
+
+.card-slide.actives{
+    display: block;
+    animation: fade 0.9s ease-in;
+}
+
+@keyframes fade {
+    from{
+      opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+    
+}
+
+.cont-btn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav{
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.box3{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.box-text-3{
+    padding: 24px 32px;
+}
+.box3 img{
+  width: 509px;
+}
+
+.box4{
+    padding: 32px;
+}
+.box4 h2{
+    font-size: 24px;
+   
+}
+}
